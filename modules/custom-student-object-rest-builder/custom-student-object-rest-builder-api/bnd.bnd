@@ -1,0 +1,6 @@
+Bundle-Name: custom-student-object-rest-builder-api
+Bundle-SymbolicName: com.custom.student.object.rest.builder.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.custom.student.object.rest.builder.dto.v1_0,\
+	com.custom.student.object.rest.builder.resource.v1_0

@@ -1,0 +1,6 @@
+Bundle-Name: aixtor-student-rest-builder-api
+Bundle-SymbolicName: com.aixtor.student.rest.builder.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.aixtor.student.rest.builder.dto.v1_0,\
+	com.aixtor.student.rest.builder.resource.v1_0

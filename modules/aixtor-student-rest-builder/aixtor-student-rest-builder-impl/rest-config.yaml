@@ -1,0 +1,9 @@
+apiDir: "../aixtor-student-rest-builder-api/src/main/java"
+apiPackagePath: "com.aixtor.student.rest.builder"
+application:
+    baseURI: "/aixtor-student"
+    className: "AixtorStudentRestBuilderApplication"
+    name: "AixtorStudentS"
+author: "kommineni.chandu"
+clientDir: "../aixtor-student-rest-builder-client/src/main/java"
+testDir: "../aixtor-student-rest-builder-test/src/testIntegration/java"

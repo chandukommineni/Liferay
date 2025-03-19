@@ -1,0 +1,10 @@
+Bundle-Name: aixtor-student-core-api
+Bundle-SymbolicName: com.aixtor.student.core.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.aixtor.student.core.exception,\
+	com.aixtor.student.core.model,\
+	com.aixtor.student.core.service,\
+	com.aixtor.student.core.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../aixtor-student-core-service/service.xml

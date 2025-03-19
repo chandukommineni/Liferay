@@ -1,0 +1,7 @@
+dependencies {
+	api project(":modules:custom-student-object-rest-builder:custom-student-object-rest-builder-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+group = "com.custom.student.object.rest.builder"

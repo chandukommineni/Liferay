@@ -1,0 +1,5 @@
+Bundle-Name: custom-student-object-rest-builder-test
+Bundle-SymbolicName: com.custom.student.object.rest.builder.test
+Bundle-Version: 1.0.0
+-includeresource: com.custom.student.object.rest.builder.client.jar=../custom-student-object-rest-builder-client/build/libs/com.custom.student.object.rest.builder.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

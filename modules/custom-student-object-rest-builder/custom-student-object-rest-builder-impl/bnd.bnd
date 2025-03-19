@@ -1,0 +1,3 @@
+Bundle-Name: custom-student-object-rest-builder-impl
+Bundle-SymbolicName: com.custom.student.object.rest.builder.impl
+Bundle-Version: 1.0.0

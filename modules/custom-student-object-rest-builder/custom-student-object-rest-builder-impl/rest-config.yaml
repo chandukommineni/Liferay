@@ -1,0 +1,9 @@
+apiDir: "../custom-student-object-rest-builder-api/src/main/java"
+apiPackagePath: "com.custom.student.object.rest.builder"
+application:
+    baseURI: "/custom-student-object-rest-builder"
+    className: "CustomStudentObjectRestBuilderApplication"
+    name: "CustomStudentObjectRestBuilder"
+author: "kommineni.chandu"
+clientDir: "../custom-student-object-rest-builder-client/src/main/java"
+testDir: "../custom-student-object-rest-builder-test/src/testIntegration/java"

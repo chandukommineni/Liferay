@@ -1,0 +1,154 @@
+info:
+    description: "AixtorStudentRestBuilder REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "AixtorStudentRestBuilder"
+    version: v1.0
+openapi: 3.0.1
+
+components:
+   schemas:
+      StudentObject:
+         properties:
+           studentId:
+             type: integer
+             format: int64
+           studentName:
+             type: string
+           studentDepartment:
+             type: string
+           studentGPA:
+             type: number
+             format: double
+           studentEnrollmentNo:
+             type: string
+
+paths:
+  "/get-student":
+    get:
+      operationId: getStudentById
+      parameters:
+        - in: query
+          name: studentId
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        200:
+          description: "Success Response"
+          content:
+            application/json:
+              schema:
+                  $ref: "#/components/schemas/StudentObject"
+            application/xml:
+              schema:
+                  $ref: "#/components/schemas/StudentObject"
+      tags: ["Students"]
+  "/get-students":
+    get:
+      operationId: getAllStudents
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: pageSize
+          schema:
+            type: integer
+      responses:
+        200:
+          description: "Success Response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/StudentObject"
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/StudentObject"
+      tags: ["Students"]
+      
+  "/delete-student/{studentId}":
+    delete:
+      operationId: deleteStudentById
+      tags:
+        - Students
+      parameters:
+        - name: studentId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: "Student Deleted Successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudentObject"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/StudentObject"
+  "/update-student":
+    put:
+      operationId: updateStudent
+      tags:
+        - Students
+     
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StudentObject"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/StudentObject"
+      responses:
+        "200":
+          description: "Student updated successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudentObject"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/StudentObject"
+  "/add-student":
+    post:
+      operationId: addStudent
+      tags:
+        - Students
+     
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StudentObject"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/StudentObject"
+      responses:
+        "200":
+          description: "Student added successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudentObject"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/StudentObject"
+
+
+  
+        
+        
+        

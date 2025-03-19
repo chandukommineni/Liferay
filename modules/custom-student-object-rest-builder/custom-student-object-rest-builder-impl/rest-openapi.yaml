@@ -1,0 +1,132 @@
+info:
+    description: "CustomStudentObjectRestBuilder REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "CustomStudentObjectRestBuilder"
+    version: v1.0
+openapi: 3.0.1
+
+
+components:
+   schemas:
+      StudentObject:
+         properties:
+           studentId:
+             type: integer
+             format: int64
+           studentName:
+             type: string
+           studentDepartment:
+             type: string
+           studentGPA:
+             type: number
+             format: double
+           enrollmentNo:
+             type: string
+    
+paths:
+  "/get-students":
+    get:
+      operationId: getAllStudents
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: pageSize
+          schema:
+            type: integer
+      responses:
+        200:
+          description: "Success Response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/StudentObject"
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/StudentObject"
+      tags: ["Students"]
+         
+  "/add-student":
+      post:
+        operationId: addStudent
+        requestBody:
+          content:
+            application/json:
+                schema:
+                    $ref: "#/components/schemas/StudentObject"
+            application/xml:
+                schema:
+                    $ref: "#/components/schemas/StudentObject"
+            
+        responses:
+          200:
+            description: "Success Response"
+            content:
+              application/json:
+                schema:
+                    $ref: "#/components/schemas/StudentObject"
+              application/xml:
+                schema:
+                    $ref: "#/components/schemas/StudentObject"
+        tags: ["Students"]
+  "/update-student/{studentId}":
+    put:
+      operationId: updateStudent
+      parameters:
+        - name: studentId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StudentObject"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/StudentObject"
+      responses:
+        200:
+          description: "Success Response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudentObject"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/StudentObject"
+      tags: 
+        - "Students"
+  "/delete-student/{studentId}":
+    delete:
+      operationId: deleteStudent
+      parameters:
+        - name: studentId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        200:
+          description: "Success Response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudentObject"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/StudentObject"
+      tags: 
+        - "Students"

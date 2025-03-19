@@ -1,0 +1,12 @@
+dependencies {
+	api project(":modules:aixtor-student-core:aixtor-student-core-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../aixtor-student-core-api/src/main/java"
+	testDir = "../aixtor-student-core-test/src/testIntegration/java"
+}
+
+group = "com.aixtor.student.core"

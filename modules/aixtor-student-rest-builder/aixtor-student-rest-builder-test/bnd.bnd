@@ -1,0 +1,5 @@
+Bundle-Name: aixtor-student-rest-builder-test
+Bundle-SymbolicName: com.aixtor.student.rest.builder.test
+Bundle-Version: 1.0.0
+-includeresource: com.aixtor.student.rest.builder.client.jar=../aixtor-student-rest-builder-client/build/libs/com.aixtor.student.rest.builder.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

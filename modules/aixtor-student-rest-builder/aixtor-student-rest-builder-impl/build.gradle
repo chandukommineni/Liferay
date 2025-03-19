@@ -1,0 +1,10 @@
+dependencies {
+	api project(":modules:aixtor-student-rest-builder:aixtor-student-rest-builder-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+    
+    compileOnly project (":modules:aixtor-student-core:aixtor-student-core-api")
+
+}
+
+group = "com.aixtor.student.rest.builder"

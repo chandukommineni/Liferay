@@ -45,6 +45,9 @@ public class DeleteStudentMVCActionCommand implements MVCActionCommand {
 	            	studentLocalService.deleteStudentByID(studentId);
 	            	return true;
 	            }
+				else{
+					_logger.info("Student Not Found to Delete");
+				}
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	        }

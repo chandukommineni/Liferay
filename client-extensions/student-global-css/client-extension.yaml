@@ -1,0 +1,9 @@
+assemble:
+    - from: assets
+      into: static
+
+student-global-css:
+    name: Student-Global-CSS
+    type: globalCSS
+    url: student.css
+    scope: portlet

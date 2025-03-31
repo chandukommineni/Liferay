@@ -1,0 +1,209 @@
+/* General Styles */
+/* body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  } */
+  
+  /* Header */
+  .heading-title {
+    text-align: center;
+    color: #444;
+    font-size: 28px;
+    margin: 20px 0;
+  }
+  
+  /* Form Container */
+  .student-form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideUp 0.6s ease-in-out;
+  }
+  
+  .student-form:hover {
+    /* transform: translateY(-8px); */
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border 0.3s;
+    font-size: 14px;
+  }
+  
+  .form-input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 8px #007BFF;
+  }
+  
+  /* Buttons */
+  .button {
+    display: inline-block;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 16px;
+  }
+
+  
+  .button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+  }
+  
+  .button-back {
+    background: #6c757d;
+    color: #fff;
+    margin-top: 5px;
+  }
+  
+  .button-back:hover {
+    background: #5a6268;
+  }
+  
+  .button-delete {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  .button-delete:hover {
+    background: #c82333;
+  }
+  
+  .button-edit {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .button-edit:hover {
+    background: #218838;
+  }
+  
+  /* Table */
+  .student-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    animation: fadeIn 0.7s ease-in-out;
+  }
+  
+  
+  
+  .table-header {
+    background: #007BFF;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .table-header th {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .table-row {
+    transition: background 0.3s;
+  }
+  
+  .table-row:hover {
+    background: #f1f1f1;
+  }
+  
+  .table-cell {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .table-button-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Loading & Error States */
+  .loading-text,
+  .error-text {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin: 20px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .student-form, .student-table {
+      width: 95%;
+    }
+    
+    .table-header th, .table-cell {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .student-container > .button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;  /* Centering the button */
+  }
+
+  
+  

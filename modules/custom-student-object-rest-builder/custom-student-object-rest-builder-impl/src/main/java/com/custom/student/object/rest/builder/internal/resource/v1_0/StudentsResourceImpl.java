@@ -152,12 +152,6 @@ public class StudentsResourceImpl extends BaseStudentsResourceImpl {
 	    return null;
 		
 	}
-
-	
-	
-	
-	
-	
 	
 	private static Options AuthConfiugrationProvide(String URL,Method method) {
 		   // Create HTTP Options

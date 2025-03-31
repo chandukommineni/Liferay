@@ -1,0 +1,9 @@
+{
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "client-extensions\\react-custom-element",
+            "client-extensions\\student-custom-element"
+        ]
+    }
+}

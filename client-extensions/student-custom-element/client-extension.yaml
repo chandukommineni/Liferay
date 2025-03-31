@@ -1,0 +1,13 @@
+assemble:
+    - from: vite-build
+      into: static
+student-custom-element:
+    friendlyURLMapping: student-custom-element
+    htmlElementName: student-custom-element
+    instanceable: true
+    name: Student Custom Element
+    portletCategoryName: category.client-extensions
+    type: customElement
+    urls:
+        - assets/*.js
+    useESM: true

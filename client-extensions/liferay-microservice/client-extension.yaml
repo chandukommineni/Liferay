@@ -1,0 +1,9 @@
+assemble:
+  - fromTask: bootJar
+liferay-microservice:
+  .serviceAddress: localhost:8081
+  .serviceScheme: http
+  name: Liferay Sample Etc Spring Boot OAuth Application User Agent
+  scopes:
+    - Liferay.Headless.Admin.Workflow.everything
+  type: oAuthApplicationUserAgent

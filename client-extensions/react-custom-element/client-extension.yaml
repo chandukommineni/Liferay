@@ -1,0 +1,13 @@
+assemble:
+    - from: vite-build
+      into: static
+react-custom-element:
+    friendlyURLMapping: react-custom-element
+    htmlElementName: react-custom-element
+    instanceable: true
+    name: React Custom Element
+    portletCategoryName: category.client-extensions
+    type: customElement
+    urls:
+        - assets/*.js
+    useESM: true

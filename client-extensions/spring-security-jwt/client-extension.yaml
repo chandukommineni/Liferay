@@ -1,9 +1,9 @@
 assemble:
   - fromTask: bootJar
-liferay-microservice:
-  .serviceAddress: localhost:8081
+spring-security-jwt:
+  .serviceAddress: localhost:8082
   .serviceScheme: http
-  name: Student Microservice
+  name: Spring Security
   scopes:
     - Liferay.Headless.Admin.Workflow.everything
   type: oAuthApplicationUserAgent

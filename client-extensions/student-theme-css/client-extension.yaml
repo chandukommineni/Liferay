@@ -1,0 +1,8 @@
+assemble:
+  - from: build/buildTheme/img   
+    into: static/img
+student-theme-css:  
+  clayURL: css/clay.css  
+  mainURL: css/main.css  
+  name: student-theme-css 
+  type: themeCSS
